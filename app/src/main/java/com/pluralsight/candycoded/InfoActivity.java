@@ -39,5 +39,11 @@ public class InfoActivity extends AppCompatActivity {
 
     // ***
     // TODO - Task 3 - Launch the Phone Activity
+    //  launch a dial Intent with a pre-defined phone number when a TextView is clicked
     // ***
+    public void createPhoneIntent(View view) {
+        Intent dialIntent = new Intent(Intent.ACTION_DIAL);
+        dialIntent.setData(Uri.parse("tel:0123456789"));
+        startActivity(dialIntent);
+    }
 }
